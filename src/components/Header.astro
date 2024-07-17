@@ -1,0 +1,81 @@
+---
+import Instagram from "./Icons/Instagram.astro";
+import Whatsapp from "./Icons/Whatsapp.astro";
+import Menu from "./Icons/Menu.astro";
+
+
+---
+
+<header id="menuMain" class="transition flex fixed items-center backdrop-blur-sm justify-between lg:justify-center gap-x-40 w-full bg-opacity-50 py-2 px-1 rounded-full">
+	<div class="flex items-center">
+		<img class="size-14 cursor-pointer"  src="imgs/logo.png" alt="LOGO NC" />
+		<div class="cursor-pointer">
+			<p class="block text-[--naranja] font-extrabold transition text-3xl text-center">NC</p>
+			<p class="pl-3 text-[--naranja] text-xs font-semibold">CERCOS ELECTRICOS</p>
+		</div>
+	</div>
+	<nav class="lg:block hidden">
+		<ul class="flex items-center gap-x-8 font-semibold text-xxl justify-between">
+			<li class="cursor-pointer text-[--naranja] rounded-full border border-transparent px-3 py-2 hover:bg-orange-400/10">Inicio</li>
+			<li class="cursor-pointer text-[--naranja] rounded-full border border-transparent px-3 py-2 hover:bg-orange-400/10 text-nowrap">Quienes somos</li>
+			<li class="cursor-pointer text-[--naranja] rounded-full border border-transparent px-3 py-2 hover:bg-orange-400/10">Trabajos</li>
+			<li class="cursor-pointer text-[--naranja] rounded-full border border-transparent px-3 py-2 hover:bg-orange-400/10">Contacto</li>
+		</ul>
+	</nav>
+	<ul class="hidden lg:flex gap-x-8">
+		<li class="cursor-pointer">
+			<Instagram />
+		</li>
+		<li class="cursor-pointer">
+			<Whatsapp />
+		</li>
+	</ul>
+	<button id="buttonMain" class="lg:hidden mr-5 rounded-full p-2 hover:bg-orange-300/50">
+		<Menu />
+	</button>
+</header>
+
+
+<div id="menu" class="transition px-5 bg-black/85 text-white absolute right-0 top-0 w-full h-full z-10 items-center">
+    <button id="button" class="rounded-full w-max p-2 text-3xl text-orange-300">
+		X
+	</button>
+    <ul class="flex flex-col gap-y-10 font-semibold mt-5">
+		<a href="#numeros">
+			<li>Inicio</li>
+		</a>
+		<a href="">
+        <li>Quienes somos</li>
+		</a>
+		<a href="">
+        <li>Trabajos</li>
+		</a>
+		<a href="">
+        <li>Contacto</li>
+		</a>
+    </ul>
+    <ul class="flex gap-x-10 mt-10">
+        <li>
+            <Instagram />
+        </li>
+        <li>
+            <Whatsapp />
+        </li>
+    </ul>
+</div>
+
+
+<script>
+	const buttonMain = document.getElementById("buttonMain")
+	const menuMain = document.getElementById("menuMain")
+	const button = document.getElementById("button")
+	const menu = document.getElementById("menu")
+
+	buttonMain.addEventListener("click",()=>{
+		menu.classList.toggle("hidden")
+	})
+
+    button.addEventListener("click",() =>{
+        menu.classList.toggle("hidden")
+    })
+</script>

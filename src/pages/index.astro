@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Counter from '../components/Counter.jsx'
+---
+
+<Layout title="NC - Cercos Electricos" description="">
+	<main class="w-full pt-[75px]">
+		<section id="slider" class="border border-orange-300/70 h-[600px] lg:w-[75%] w-full lg:mx-auto px-5 lg:px-0 my-24 lg:flex-row flex-col flex gap-x-8 gap-y-10 items-center">
+			<div class="flex justify-center items-center font-xs text-black bg-orange-300/70 h-[2000px] lg:h-full w-full lg:w-[85%] text-center">
+				// CARRUSEL DE IMAGENES //
+			</div>
+			<aside class="mx-auto h-full justify-between lg:overflow-auto flex items-center">
+				<ul class="flex gap-x-10 flex-row lg:flex-col w-full lg:gap-y-5">
+					<li class="w-40 h-40 bg-orange-300/70 flex justify-center items-center font-xs" >// ITEM //</li>
+					<li class="w-40 h-40 bg-orange-300/70 flex justify-center items-center font-xs" >// ITEM //</li>
+					<li class="w-40 h-40 bg-orange-300/70 flex justify-center items-center font-xs" >// ITEM //</li>
+					<li class="w-40 h-40 bg-orange-300/70 flex justify-center items-center font-xs" >// ITEM //</li>
+					<li class="w-40 h-40 bg-orange-300/70 flex justify-center items-center font-xs" >// ITEM //</li>
+				</ul>
+			</aside>
+		</section>
+		<section id="numeros" class="bg-orange-300/70 w-[40%] lg:w-[75%] mx-auto my-10 py-10">
+			<h2 class="text-wrap font-extrabold text-center text-xl lg:text-3xl pb-10 px-5">TENEMOS HECHOS ....</h2>
+			<ul class="gap-y-10 flex flex-col lg:flex-row items-center justify-between">
+				<li class="mx-20 h-60 lg:w-60 bg-orange-300/80 rounded-3xl flex flex-col justify-center items-center gap-y-10">
+					<p class="font-black text-9xl">+0</p> 
+					<p class="font-semibold text-center">TRABAJOS REALIZADOS</p> 
+				</li> 
+				<li class="mx-20 h-60 lg:w-60 bg-orange-300/80 rounded-3xl flex flex-col justify-center items-center gap-y-10">
+					<p class="font-black text-9xl">+0</p> 
+					<p class="font-semibold">BARRIOS</p> 
+				</li> 
+				<li class="mx-20 h-60 lg:w-60 bg-orange-300/80 rounded-3xl flex flex-col justify-center items-center gap-y-10">
+					<p class="font-black text-9xl">+0</p>
+					<p class="font-semibold">EFECTIVIDAD</p>
+				</li>
+			</ul>
+		</section>
+		<section id="nosotros" class="bg-orange-300/70 w-[75%] h-[300px] mx-auto mb-32">
+			<h3 class="font-extrabold text-center text-3xl py-10">¿Quienes Somos?</h3>
+			<p class="flex items-center justify-center text-center font-bold w-full h-full bg-orange-300">
+				TEXTO
+			</p>
+		</section>
+	</main>
+	
+</Layout>
+
+<style>
+	body{
+		font-family: 'Montserrat Variable';
+	}
+	h2{
+		font-family: "Orbitron Variable"
+	}
+	li p{
+		font-family: "Orbitron Variable"
+ 
+	}
+</style>

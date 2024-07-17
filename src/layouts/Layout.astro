@@ -1,0 +1,46 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
+// Supports weights 400-900
+import '@fontsource-variable/orbitron';
+
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-100">
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root{
+		--naranja: #efa524;
+		--violeta: #9a00c2;
+		--amarillo: #ffbe0b;
+		--fondo: #212121;
+	}
+	body{
+		background-color: hsla(217, 0%, 100%, 1);
+    	background-image: radial-gradient(circle at 86% 50%, hsla(280, 0%, 89%, 1) 6.688754566361296%, transparent 44.98438254159411%);
+    	background-blend-mode: normal;
+	}
+</style>
